@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel & Trace - 旅行规划</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-logo">
+      <i class="fa-solid fa-compass"></i>
+      <span>Travel & Trace</span>
+    </div>
+    <div class="nav-menu">
+      <a href="#plan"><i class="fa-solid fa-route"></i> 行程</a>
+      <a href="#discover"><i class="fa-solid fa-map-location-dot"></i> 发现</a>
+      <a href="#profile"><i class="fa-solid fa-user"></i> 我的</a>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="hero-section">
+      <div class="hero-bg"></div>
+      <div class="hero-content">
+        <h1>想要去哪里玩儿？</h1>
+        <div class="search-box">
+          <i class="fa-solid fa-search"></i>
+          <input type="text" placeholder="搜索目的地或行程" class="search-input">
+          <button class="search-btn">搜索</button>
+        </div>
+        <div class="quick-tags">
+          <span class="tag">热门推荐</span>
+          <span class="tag">周末游</span>
+          <span class="tag">亲子游</span>
+          <span class="tag">自驾游</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h2>精选行程</h2>
+        <a href="#" class="view-more">查看更多</a>
+      </div>
+      
+      <div class="trip-list">
+        <div class="trip-card" onclick="showJourney('leshan')">
+          <div class="trip-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Leshan%20city%20beautiful%20scenery%20Chinese%20traditional%20architecture%20mountains%20green%20nature&image_size=landscape_4_3" alt="乐山">
+            <div class="trip-duration">2天</div>
+          </div>
+          <div class="trip-info">
+            <h3>乐山2日游｜一天炫八顿的小吃天堂</h3>
+            <div class="trip-meta">
+              <span><i class="fa-solid fa-map-pin"></i> 17个地点</span>
+              <span><i class="fa-solid fa-star"></i> 4.8分</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip-card" onclick="showJourney('luzern')">
+          <div class="trip-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Lucerne%20Switzerland%20beautiful%20lake%20mountains%20swiss%20alps%20scenic&image_size=landscape_4_3" alt="卢塞恩">
+            <div class="trip-duration">1天</div>
+          </div>
+          <div class="trip-info">
+            <h3>卢塞恩一日游｜仿佛抵达了天堂的入口</h3>
+            <div class="trip-meta">
+              <span><i class="fa-solid fa-map-pin"></i> 7个地点</span>
+              <span><i class="fa-solid fa-star"></i> 4.9分</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip-card" onclick="showJourney('venice')">
+          <div class="trip-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Venice%20Italy%20beautiful%20canal%20gondola%20romantic%20sunset&image_size=landscape_4_3" alt="威尼斯">
+            <div class="trip-duration">1天</div>
+          </div>
+          <div class="trip-info">
+            <h3>威尼斯一日游 | 摇曳在水上的浪漫天堂</h3>
+            <div class="trip-meta">
+              <span><i class="fa-solid fa-map-pin"></i> 6个地点</span>
+              <span><i class="fa-solid fa-star"></i> 4.7分</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="trip-card" onclick="showJourney('christchurch')">
+          <div class="trip-image">
+            <img src="https://pitravel.pitravelcdn.com/image/1040g0l0311js1b6cmo0g3pgihu05o7ghql6cnv0" alt="基督城">
+            <div class="trip-duration">1天</div>
+          </div>
+          <div class="trip-info">
+            <h3>基督城一日游｜花园城市的宁静时光</h3>
+            <div class="trip-meta">
+              <span><i class="fa-solid fa-map-pin"></i> 5个地点</span>
+              <span><i class="fa-solid fa-star"></i> 4.9分</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-header">
+        <h2>热门目的地</h2>
+      </div>
+      
+      <div class="dest-list">
+        <div class="dest-item">
+          <div class="dest-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Beijing%20Forbidden%20City%20Chinese%20traditional%20architecture%20landmark&image_size=square" alt="北京">
+          </div>
+          <span class="dest-name">北京</span>
+        </div>
+        <div class="dest-item">
+          <div class="dest-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Shanghai%20skyline%20Oriental%20Pearl%20Tower%20modern%20city%20night&image_size=square" alt="上海">
+          </div>
+          <span class="dest-name">上海</span>
+        </div>
+        <div class="dest-item">
+          <div class="dest-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Guangzhou%20Canton%20Tower%20modern%20architecture%20China&image_size=square" alt="广州">
+          </div>
+          <span class="dest-name">广州</span>
+        </div>
+        <div class="dest-item">
+          <div class="dest-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Shenzhen%20skyline%20modern%20city%20China%20night%20view&image_size=square" alt="深圳">
+          </div>
+          <span class="dest-name">深圳</span>
+        </div>
+        <div class="dest-item">
+          <div class="dest-image">
+            <img src="https://pitravel.pitravelcdn.com/image/1040g0l0311js1b6cmo0g3pgihu05o7ghql6cnv0" alt="基督城">
+          </div>
+          <span class="dest-name">基督城</span>
+        </div>
+        <div class="dest-item">
+          <div class="dest-image">
+            <img src="https://neeko-copilot.bytedance.net/api/text_to_image?prompt=Leshan%20Giant%20Buddha%20Sichuan%20China%20scenic&image_size=square" alt="乐山">
+          </div>
+          <span class="dest-name">乐山</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="journey-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button class="back-btn" onclick="closeJourney()">
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+        <h2 id="journey-title">行程详情</h2>
+      </div>
+      <div class="journey-cover">
+        <img id="journey-cover-img" src="" alt="">
+        <div class="journey-overlay"></div>
+        <div class="journey-summary">
+          <h3 id="journey-name">行程名称</h3>
+          <p id="journey-desc">行程描述</p>
+          <div class="journey-stats">
+            <span id="journey-days">2天</span>
+            <span id="journey-places">17个地点</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="journey-content" class="journey-content">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
