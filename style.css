@@ -110,10 +110,7 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url('https://neeko-copilot.bytedance.net/api/text_to_image?prompt=beautiful%20travel%20landscape%20mountains%20lake%20sunset%20scenic%20nature%20peaceful&image_size=landscape_16_9');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.3;
+  background: linear-gradient(135deg, rgba(255,255,255,0.3) 0%, rgba(255,255,255,0.1) 100%);
 }
 
 .hero-content {
